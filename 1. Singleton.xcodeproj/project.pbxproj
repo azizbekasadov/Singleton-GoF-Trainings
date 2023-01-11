@@ -13,6 +13,7 @@
 		5DF258D7296F053D00CD3A2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DF258D5296F053D00CD3A2B /* Main.storyboard */; };
 		5DF258D9296F053E00CD3A2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DF258D8296F053E00CD3A2B /* Assets.xcassets */; };
 		5DF258DC296F053E00CD3A2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DF258DA296F053E00CD3A2B /* LaunchScreen.storyboard */; };
+		5DF258EC296F100700CD3A2B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF258EB296F100700CD3A2B /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		5DF258D8296F053E00CD3A2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DF258DB296F053E00CD3A2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DF258DD296F053E00CD3A2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DF258E3296F056E00CD3A2B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5DF258EB296F100700CD3A2B /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +43,7 @@
 		5DF258C3296F053C00CD3A2B = {
 			isa = PBXGroup;
 			children = (
+				5DF258E3296F056E00CD3A2B /* README.md */,
 				5DF258CE296F053C00CD3A2B /* 1. Singleton */,
 				5DF258CD296F053C00CD3A2B /* Products */,
 			);
@@ -56,15 +60,72 @@
 		5DF258CE296F053C00CD3A2B /* 1. Singleton */ = {
 			isa = PBXGroup;
 			children = (
-				5DF258CF296F053C00CD3A2B /* AppDelegate.swift */,
-				5DF258D1296F053D00CD3A2B /* SceneDelegate.swift */,
-				5DF258D3296F053D00CD3A2B /* ViewController.swift */,
-				5DF258D5296F053D00CD3A2B /* Main.storyboard */,
+				5DF258E6296F05FF00CD3A2B /* PresentationLayer */,
+				5DF258E5296F05F800CD3A2B /* AppLayer */,
+				5DF258E4296F05C300CD3A2B /* Resources */,
+			);
+			path = "1. Singleton";
+			sourceTree = "<group>";
+		};
+		5DF258E4296F05C300CD3A2B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				5DF258D8296F053E00CD3A2B /* Assets.xcassets */,
 				5DF258DA296F053E00CD3A2B /* LaunchScreen.storyboard */,
 				5DF258DD296F053E00CD3A2B /* Info.plist */,
 			);
-			path = "1. Singleton";
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5DF258E5296F05F800CD3A2B /* AppLayer */ = {
+			isa = PBXGroup;
+			children = (
+				5DF258CF296F053C00CD3A2B /* AppDelegate.swift */,
+				5DF258D1296F053D00CD3A2B /* SceneDelegate.swift */,
+			);
+			path = AppLayer;
+			sourceTree = "<group>";
+		};
+		5DF258E6296F05FF00CD3A2B /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				5DF258ED296F105200CD3A2B /* Singletons */,
+				5DF258E7296F060800CD3A2B /* Scene */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		5DF258E7296F060800CD3A2B /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				5DF258E9296F0FD500CD3A2B /* Main */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		5DF258E8296F061000CD3A2B /* Skeleton */ = {
+			isa = PBXGroup;
+			children = (
+				5DF258D5296F053D00CD3A2B /* Main.storyboard */,
+			);
+			path = Skeleton;
+			sourceTree = "<group>";
+		};
+		5DF258E9296F0FD500CD3A2B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5DF258E8296F061000CD3A2B /* Skeleton */,
+				5DF258D3296F053D00CD3A2B /* ViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5DF258ED296F105200CD3A2B /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				5DF258EB296F100700CD3A2B /* Settings.swift */,
+			);
+			path = Singletons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +201,7 @@
 			files = (
 				5DF258D4296F053D00CD3A2B /* ViewController.swift in Sources */,
 				5DF258D0296F053D00CD3A2B /* AppDelegate.swift in Sources */,
+				5DF258EC296F100700CD3A2B /* Settings.swift in Sources */,
 				5DF258D2296F053D00CD3A2B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,7 +351,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7FCTC6DRE7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "1. Singleton/Info.plist";
+				INFOPLIST_FILE = "1. Singleton/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +379,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7FCTC6DRE7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "1. Singleton/Info.plist";
+				INFOPLIST_FILE = "1. Singleton/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
